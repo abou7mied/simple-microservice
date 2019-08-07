@@ -14,7 +14,7 @@ const init = () => {
       const {hash} = await act('role:utils,cmd:hashPassword', {password});
       res.send(`hash: ${hash}`);
     } catch (error) {
-      res.send("error occurred");
+      res.send("Could not hash the password, it seems that the utils microservice isn't started");
     }
   };
 };
